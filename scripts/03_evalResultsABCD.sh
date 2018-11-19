@@ -1,17 +1,6 @@
 #!/bin/bash
 # $ chmod a+rx my-script.sh
 
-function rmIfExists() {
-  for file in $*
-  do
-    if [ -e ${file} ]; then
-      rm ${file}
-    fi
-  done
-}
-
- 
-
 echo ' '
 echo 'Start of Eval'
 echo 'Eval directory: ' $1
@@ -37,16 +26,6 @@ listToUse="listToUse-ABCD.txt"
 if [ -e ${listToUse} ]
 then
   rm ${listToUse}
-fi
-scatterABCD="scatterplot-ABCD.txt"
-if [ -e ${scatterABCD} ]
-then
-  rm ${scatterABCD}
-fi
-scatterABCDCPU="scatterplot-ABCD-CPU.txt"
-if [ -e ${scatterABCDCPU} ]
-then
-  rm ${scatterABCDCPU}
 fi
 
 for f in ${files} ; do 
@@ -95,8 +74,6 @@ for f in ${files} ; do
 	fi
 	fileName=$f
 	echo 'result: ' ${result}
-	#echo 'name: ' ${name}
-	#signal=$(grep 'signal' ${result})
 	if [[ ${result} == "signal(6)" ]] ; then
 		((signal++))
 	else
@@ -106,8 +83,6 @@ for f in ${files} ; do
 				((correct++))
 				echo "${fileName} , ${result}, ${real} , ${cpu}" >> ${correctTempFile}
 				echo "${fileName}" >> ${listToUse}
-				echo "${real}" >> ${scatterABCD}
-				echo "${cpu}" >> ${scatterABCDCPU}
 			else
 				((wrong++))
 				echo "${fileName} , ${result}, ${real} , ${cpu}" >> ${failsTempFile}
@@ -127,8 +102,6 @@ for f in ${files} ; do
 				((correct++))
 				echo "${fileName} , ${result}, ${real} , ${cpu}" >> ${correctTempFile}
 				echo "${fileName}" >> ${listToUse}
-				echo "${real}" >> ${scatterABCD}
-				echo "${cpu}" >> ${scatterABCDCPU}
 			fi
 		
 		fi
@@ -136,9 +109,6 @@ for f in ${files} ; do
 
 	
 done 
-cat ${scatterABCDCPU}
-echo '++++++++++++++++++++++++++++++++++++++++'
-cat ${scatterABCD}
 echo '++++++++++++++++++++++++++++++++++++++++'
 cat ${listToUse}
 echo '++++++++++++++++++++++++++++++++++++++++'

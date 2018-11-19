@@ -1,17 +1,6 @@
 #!/bin/bash
 # $ chmod a+rx my-script.sh
 
-function rmIfExists() {
-  for file in $*
-  do
-    if [ -e ${file} ]; then
-      rm ${file}
-    fi
-  done
-}
-
- 
-
 echo ' '
 echo 'Start of Eval'
 echo 'Eval directory: ' $1
@@ -37,16 +26,6 @@ listToUse="listToUse-Minireach.txt"
 if [ -e ${listToUse} ]
 then
   rm ${listToUse}
-fi
-scatterMinireach="scatterplot-Minireach.txt"
-if [ -e ${scatterMinireach} ]
-then
-  rm ${scatterMinireach}
-fi
-scatterMinireachCPU="scatterplot-Minireach-CPU.txt"
-if [ -e ${scatterMinireachCPU} ]
-then
-  rm ${scatterMinireachCPU}
 fi
 
 for f in ${files} ; do 
@@ -112,8 +91,6 @@ for f in ${files} ; do
 				((correct++))
 				echo "${fileName} , ${result}, ${real} , ${cpu}" >> ${correctTempFile}
 				echo "${fileName}" >> ${listToUse}
-				echo "${real}" >> ${scatterMinireach}
-				echo "${cpu}" >> ${scatterMinireachCPU}
 			else
 				((wrong++))
 				echo "${fileName} , ${result}, ${real} , ${cpu}" >> ${failsTempFile}
@@ -127,17 +104,11 @@ for f in ${files} ; do
 				((correct++))
 				echo "${fileName} , ${result}, ${real} , ${cpu}" >> ${correctTempFile}
 				echo "${fileName}" >> ${listToUse}
-				echo "${real}" >> ${scatterMinireach}
-				echo "${cpu}" >> ${scatterMinireachCPU}
 			fi
 		
 		fi
 	fi
 done 
-#cat ${scatterMinireachCPU}
-#echo '++++++++++++++++++++++++++++++++++++++++'
-#cat ${scatterMinireach}
-echo '++++++++++++++++++++++++++++++++++++++++'
 cat ${listToUse}
 echo '++++++++++++++++++++++++++++++++++++++++'
 cat ${correctTempFile}

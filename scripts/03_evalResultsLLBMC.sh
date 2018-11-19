@@ -1,16 +1,6 @@
 #!/bin/bash
 # $ chmod a+rx my-script.sh
 
-function rmIfExists() {
-  for file in $*
-  do
-    if [ -e ${file} ]; then
-      rm ${file}
-    fi
-  done
-}
-
-
 echo ' '
 echo 'Start of Eval'
 echo 'OUTPUT ' $1
@@ -72,12 +62,7 @@ while read p; do
 		fi
 	fi
 done <$1
-echo '++++++++++++++++++++++++++++++++++++++++'
-#cat ${listToUse}
-echo '++++++++++++++++++++++++++++++++++++++++'
-#cat ${correctTempFile}
-echo '++++++++++++++++++++++++++++++++++++++++'
-#cat ${failsTempFile}
+cat ${correct}
 echo '++++++++++++++++++++++++++++++++++++++++'
 echo 'total: ' ${total}
 echo 'correctNr: ' ${correctNr}

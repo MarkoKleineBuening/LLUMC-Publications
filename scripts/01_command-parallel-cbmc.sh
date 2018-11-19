@@ -1,17 +1,6 @@
 #!/bin/bash
 # $ chmod a+rx my-script.sh
-
-function rmIfExists() {
-  for file in $*
-  do
-    if [ -e ${file} ]; then
-      rm ${file}
-    fi
-  done
-}
-
  
-#when usng the parallel command you have to delete the two for-loops and just write f=hardCodedPathToBenchmarks
 echo ' '
 echo 'Start of Script'
 
@@ -38,5 +27,5 @@ echo 'Start of Script'
 	runlim --kill --output-file=${folderName}/${outputFile} --real-time-limit=600 ${folderName}/02_runCBMCC-a.sh ${folderName}/$g.c outputCBMC-TRUE-NEW.txt
 
 	mkdir -p 00-CBMC-Results-TRUE-NEW; cp ${folderName}/${outputFile} 00-CBMC-Results-TRUE-NEW/$g
-	#rmIfExists carj.json AIGtoCNF.txt DimSpecFormulaPre.cnf NameToAIG.txt output_0.cnf output_1.cnf output_1.cnf output_2.cnf output_3.cnf
-echo "Finished Script"
+
+	echo "Finished Script"
