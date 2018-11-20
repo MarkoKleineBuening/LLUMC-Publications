@@ -1,0 +1,29 @@
+LLBMC EVALUATION LICENSE AGREEMENT
+FOR LLBMC VERSION 2013.1
+
+The LLBMC Team / Karlsruhe Institute of Technology (KIT) grants you a personal,
+non-exclusive, non-transferable, limited 30-day license without fees to install,
+execute and use internally this Software (LLBMC) for evaluation and testing
+purposes.
+
+You may use this Software for evaluation and testing purposes for 30 days
+starting the day you accepted this license agreement and obtained access to the
+Software. After expiration of the evaluation period of 30 days you are no longer
+permitted to use or evaluate the Software in any form.
+
+Any use beyond the provisions given above is prohibited.
+
+THIS SOFTWARE IS PROVIDED ''AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+LLBMC - The Low-Level Bounded Model Checker
+Copyright (c) 2010-2013 Stephan Falke, Florian Merz, Carsten Sinz
+Karlsruhe Institute of Technology (KIT), Germany.
+All rights reserved.
