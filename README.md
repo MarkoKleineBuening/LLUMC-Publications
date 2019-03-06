@@ -1,5 +1,5 @@
 # LLUMC-Publications
-Repository for static binaries, benachmarks, scripts, etc. for execution LLUMC and related approaches for the TACAS 2019. 
+Repository for static binaries, benachmarks, scripts for the execution of LLUMC and related approaches. Furthermore results of evaluating LLUMC compared to CBMC and LLBMC are given. 
 Every folder contains further information in a seperate README file.
 Following the set up for the benchmarks as performed by the autors are described. The main  execution of the different tools are in the 02_* scripts.
 
